@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+    //Sigma algorithm: Implement a function sigma(n) that, given a number n,
+    //returns the sum of all positive integers from 1 up to  n (inclusive).
+    //For example sigma(3) = 1+2+3; sigma(5) = 1+2+3+4+5.
+    function sigma(x){
+      var sum = 0;
+      for(var i = 1; i <= x; i++){
+          sum += i;
+      }
+      return sum;
+    }
+    //Factorial: Write a function factorial() that, given a number n,
+    //returns the product (multiplication) of all positive integers
+    //from 1 up to n (inclusive). For example, factorial(3) = 1 * 2 * 3;
+    //factorial(5) = 1 * 2 * 3 * 4 * 5
+    function factorial(x){
+      if(x < 0){
+        return 0;
+      }
+      var fact = 1;
+      for(var i = 1; i <= x; i++){
+        fact *= i;
+      }
+      return fact;
+    }
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

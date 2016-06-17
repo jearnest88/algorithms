@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+    //Add all the values from 100 and 4000000 (inclusive) that are evenly
+    //divided by 3 or 5 but not both. Display this value in the console.
+    function threeAndFives(val1, val2){
+      var result = 0;
+      if(val1 === undefined){
+        val1 = 100;
+      }
+      if(val2 === undefined){
+        val2 = 4000000;
+      }
+      for(var i = val1; i < val2; i++){
+        if((i % 3 == 0)
+        || (i % 5 == 0)){
+          if((i % 3 == 0)
+          && (i % 5 == 0)){
+            continue;
+          }
+          result += i;
+        }
+      }
+      console.log("The 3 and 5 sum  of ", val1, val2, result)
+    }
+
+    //Generate Coin Change:
+    //Implement a function generateCoinChange() that accepts a
+    //parameter for the number of cents, and computes how to represent that
+    //amount with the smallest number of coins. Console.log the result.
+    function generateCoinChange(a){
+      console.log("total amount of cents is: ");
+      var dollars = 0;
+      var quarters = 0;
+      var dimes = 0;
+      var nickels = 0;
+      var pennies = 0;
+      while(a >= 100){
+        dollars++;
+        a -= 100;
+      }
+      while(a >= 25){
+        quarters++;
+        a -= 25;
+      }
+      while(a >= 10){
+        dimes++;
+        a -= 10;
+      }
+      while(a >= 5){
+        nickels++;
+        a -= 5;
+      }
+      while(a >= 1){
+        pennies++;
+        a -= 1;
+      }
+      console.log("dollars: ", dollars);
+      console.log("quarters: ", quarters);
+      console.log("dimes: ", dimes);
+      console.log("nickels: ", nickels);
+      console.log("pennies: ", pennies);
+    }
+
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

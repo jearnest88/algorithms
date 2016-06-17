@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <script type="text/javascript">
+    "use strict"
+    // Given a numerical array, reverse the order of the values.
+    // The reversed array should have the same length, with existing elements
+    // moved to other indices so that the order of elements is reversed.
+      function revArray(arr){
+        var newarr = [];
+        for(var i = arr.length - 1; i >= 0; i--){
+          newarr.push(arr[i]);
+        }
+        console.log(newarr);
+      }
+
+      // Implement a function removeNegatives() that accepts an array
+      // and removes any values that are less than zero.  Optional:
+      // do this without two nested loops.
+      function posArray(arr){
+        var newarr = [];
+        for(var i = 0; i < arr.length; i++){
+          if(arr[i] > 0){
+            newarr.push(arr[i]);
+          }
+        }
+        console.log(newarr);
+      }
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
