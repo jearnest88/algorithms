@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      "use strict"
+      // Insert a given value at the beginning of the given array, without
+      // using any built-in array methods.
+      function pushFront(arr, x){
+        for(var i = arr.length; i > 0; i--){
+          arr[i] = arr[i - 1];
+        }
+        arr[0] = x;
+      }
+
+      // Given an array, remove and return the value at the
+      // beginning of the array. Do this without using any built­in
+      // array methods except pop().
+      function popFront(arr){
+        var firstVal = arr[0]
+        if(arr.length == 0){
+          return null;
+        }
+        for(var i = 1; i < arr.length; i++){
+          arr[i - 1] = arr[i];
+        }
+        arr.pop()
+        return firstVal;
+      }
+      // Given an array, an index, and an additional value,
+      // insert the value into the array at the given index. Do
+      // this without using any built­in array methods.
+      function insertAt(arr,ind,x){
+        if(ind > arr.length){
+          ind = arr.length;
+        }
+        if(ind < 0){
+          ind = 0;
+        }
+        for(var i = arr.length; i > ind; i--){
+          arr[i] = arr[i - 1];
+        }
+        arr[ind] = x;
+      }
+      // Given an array and an index into the array, remove and
+      // return the array value at that index. Do this without
+      // using any built ­in array methods except pop().
+      function removeAt(arr, ind){
+        var removedVal = arr[ind];
+        if(ind > arr.length){
+          ind = arr.length - 1;
+        }
+        if(ind < 0){
+          ind = 0;
+        }
+        if (ind == 0){
+          for(var i = 1; i < arr.length; i++){
+            arr[i - 1] = arr[i];
+          }
+          arr.pop()
+          return removedVal;
+        }
+        if (ind == arr.length - 1){
+          arr.pop();
+          return removedVal;;
+        }
+        for(var i = ind + 1; i < arr.length; i++){
+          arr[i - 1] = arr[i];
+        }
+        arr.pop();
+        return removedVal;
+      }
+
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
